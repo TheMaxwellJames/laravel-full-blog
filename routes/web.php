@@ -46,6 +46,11 @@ Route::post('/update_post/{id}', [AdminController::class, 'update_post']);
 
 Route::get('/post_details/{id}', [HomeController::class, 'post_details']);
 
+Route::get('/create_post', [HomeController::class, 'create_post']);
+
+
+Route::post('/user_post', [HomeController::class, 'user_post']);
+
 
 
 
