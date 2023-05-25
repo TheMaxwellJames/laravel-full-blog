@@ -51,7 +51,7 @@ Route::get('/create_post', [HomeController::class, 'create_post']);
 Route::post('/user_post', [HomeController::class, 'user_post']);
 
 
-//Route::post('/user_post', [HomeController::class, 'user_post']);
+
 
 
 
