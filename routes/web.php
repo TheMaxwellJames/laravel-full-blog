@@ -48,8 +48,10 @@ Route::get('/post_details/{id}', [HomeController::class, 'post_details']);
 
 Route::get('/create_post', [HomeController::class, 'create_post']);
 
-
 Route::post('/user_post', [HomeController::class, 'user_post']);
+
+
+//Route::post('/user_post', [HomeController::class, 'user_post']);
 
 
 
