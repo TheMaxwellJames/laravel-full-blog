@@ -60,10 +60,10 @@
             <input type="text" name="title">
         </div>
 
-        <div class="field_deg">
-            <label for="">Description</label>
-           <textarea name="" id="" cols="" rows="">Description</textarea>
-        </div>
+        <div class="div_center">
+            <label for="">Post Description</label>
+           <textarea name="description"></textarea>
+            </div>
 
         <div class="field_deg">
             <label for="">Add Image</label>
