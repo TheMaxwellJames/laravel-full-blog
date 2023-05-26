@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
+use Alert;
 
 class HomeController extends Controller
 {
@@ -109,6 +110,35 @@ class HomeController extends Controller
 
         $post->save();
 
+        Alert::success('Congrats', 'Data Added Successfully');
+
         return redirect()->back();
+   }
+
+
+
+   public function my_post()
+   {
+
+        $user=Auth::user();
+
+        $userid=$user->id;
+
+        $data = Post::where('user_id', '=', $userid)->get();
+
+
+    return view('home.my_post', compact('data'));
+   }
+
+
+
+   public function my_post_del($id)
+   {
+        $data = Post::find($id);
+
+        $data->delete();
+
+        return redirect()->back()->with('message', 'Post Deleted Successfully');
+
    }
 }
