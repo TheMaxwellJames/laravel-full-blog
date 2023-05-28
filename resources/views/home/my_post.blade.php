@@ -68,7 +68,7 @@
             <h4 class="title_deg">{{$data->title}}</h4>
             <p class="des_deg">{{$data->description}}</p>
             <a onclick="return confirm('Sure To Delete?')" href="{{url('my_post_del', $data->id)}}" class="btn btn-danger">Delete</a>
-
+            <a href="{{url('post_update_page', $data->id)}}" class="btn btn-primary">Update</a>
         </div>
 
         @endforeach
