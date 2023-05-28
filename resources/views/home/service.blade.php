@@ -8,7 +8,7 @@
                  @foreach($post as $post)
 
 
-                  <div class="col-md-4">
+                  <div class="col-md-4" style=" padding:30px;">
                      <div><img src="/postimage/{{$post->image}}" class="services_img" style="margin-bottom:20px; height:200px; width:350px"></div>
 
                      <h4>{{$post->title}}</h4>

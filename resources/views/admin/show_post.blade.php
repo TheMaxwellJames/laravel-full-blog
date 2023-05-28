@@ -53,6 +53,8 @@
      
       <div class="page-content">
 
+
+
       @if(session()->has('message'))
 
       <div class="alert alert-danger">
@@ -78,6 +80,8 @@
                     <th>Image</th>
                     <th>Delete</th>
                     <th>Edit</th>
+                    <th>Status Accept</th>
+                    <th>Status Reject</th>
                 </tr>
 
 
@@ -97,6 +101,14 @@
 
                     <td>
                         <a href="{{url('edit_page', $post->id)}}" class="btn btn-success">Edit</a>
+                    </td>
+
+                    <td>
+                        <a onclick="return confirm('Sure To Accept?')" href="{{url('accept_post', $post->id)}}" class="btn btn-outline-secondary">Accept</a>
+                    </td>
+
+                    <td>
+                        <a onclick="return confirm('Sure To Reject?')" href="{{url('reject_post', $post->id)}}" class="btn btn-primary">Reject</a>
                     </td>
                 </tr>
                 @endforeach
